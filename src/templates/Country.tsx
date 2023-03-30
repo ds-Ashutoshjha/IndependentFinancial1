@@ -26,7 +26,11 @@ import Footer from "../components/layouts/footer";
 var currentUrl = "";
 export const config: TemplateConfig = {
   stream: {
-    $id: "matlan-country",
+    $id: "country",
+    filter: {
+      entityTypes: ["ce_country"]
+      // savedFilterIds: ["dm_stores-directory_address_countrycode"]
+    },
     // Specifies the exact data that each generated document will contain. This data is passed in
     // directly as props to the default exported function.
     fields: [
@@ -52,12 +56,7 @@ export const config: TemplateConfig = {
       "dm_directoryChildren.dm_directoryChildren.dm_directoryChildren.slug"
     ],
     // Defines the scope of entities that qualify for this stream.
-    filter: {
-      entityTypes: ["ce_country"],
-      savedFilterIds: [
-        "dm_stores-directory_address_countrycode"
-      ]
-    },
+   
     // The entity language profiles that documents will be generated for.
     localization: {
       locales: ["en"],
@@ -312,3 +311,4 @@ const country: Template<TemplateRenderProps> = ({
 };
 
 export default country;
+
