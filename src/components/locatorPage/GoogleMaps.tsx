@@ -256,6 +256,7 @@ function UnwrappedGoogleMaps({
               text: String(markers?.length),
               color: "white",
             },
+            
             //  animation: google.maps.Animation.DROP,
           });
         },
