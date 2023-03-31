@@ -254,9 +254,8 @@ function UnwrappedGoogleMaps({
             icon: clustericon,
             label: {
               text: String(markers?.length),
-              color: "white",
+              color: "#e8e8e8",
             },
-            
             //  animation: google.maps.Animation.DROP,
           });
         },
@@ -271,8 +270,57 @@ function UnwrappedGoogleMaps({
     if (ref.current && !map) {
       setMap(
         new window.google.maps.Map(ref.current, {
+          
           center,
           zoom,
+          styles: [
+            {
+              featureType: "administrative",
+              elementType: "all",
+              stylers: [
+                {
+                  visibility: "simplified",
+                },
+              ],
+            },
+            {
+              featureType: "landscape",
+              elementType: "all",
+              stylers: [
+                {
+                  visibility: "on",
+                  color:"#e5e3df",
+                },
+              ],
+            },
+            {
+              featureType: "landscape",
+              elementType: "gecometry.fill",
+              stylers: [
+                {
+                  color:"#e5e3df",
+                },
+              ],
+            },
+            {
+              featureType: "poi",
+              elementType: "all",
+              stylers: [
+                {
+                  visibility: "off",
+                },
+              ],
+            },
+            {
+              featureType: "transit",
+              elementType: "all",
+              stylers: [
+                {
+                  visibility: "off",
+                },
+              ],
+            },
+          ],
           ...providerOptions,
         })
       );

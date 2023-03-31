@@ -130,7 +130,7 @@ body.mapView .mobile-btns .btn.mapBtn{  @apply text-Dark-red border-t-0 border-l
 .search-field{@apply flex relative  }
 .search-bx .search-btn{@apply absolute top-0 rounded-none right-0  text-white p-2 w-12 h-12 text-center bg-red hover:bg-hover-btn}  
 .search-bx .search-btn svg{ @apply mx-auto}
-.search-field input{@apply  w-full bg-white h-12 text-dark-gray placeholder:text-dark-gray  py-2 pr-20 sm:py-4 sm:pr-40 pl-4 leading-7  text-[1.0625rem] font-main-font  border border-[#8c8c8c] rounded-none }
+.search-field input{@apply  w-full bg-white border border-[#000000] h-12 text-dark-gray placeholder:text-dark-gray  py-2 pr-20 sm:py-4 sm:pr-40 pl-4 leading-7  text-[1.0625rem] font-main-font  border border-[#8c8c8c] rounded-none }
 .location p{ @apply mr-2 absolute rounded-lg -left-4 top-[0px] sm:top-[2px] xl:top-1}
 .search-bx .whitespace-nowrap{  @apply text-white !font-normal py-0 }
 .location{ @apply  border-b border-[#d8d8d8]  mt-0 }
@@ -1508,4 +1508,8 @@ a.Product-cta {
 .nearby-sec{
   background-color: #293651;
   background-image: linear-gradient(180deg,#293651,transparent),url('https://locations.ifinancial.com/permanent-b0b701/assets/images/home-bg-pattern.7a8e001c.svg');
+}
+
+.search-field input{
+  border: 1px solid #d34d38 !important;
 }
