@@ -12,7 +12,8 @@
       "c_footerLogo",
       "c_footerSectionMenus",
       "c_socialMediaIcons",
-      "c_bottomFooter"
+      "c_bottomFooter",
+      "c_404photo"
        ],
   "localization": {
     "locales": ["en"],

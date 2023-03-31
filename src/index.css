@@ -1513,3 +1513,7 @@ a.Product-cta {
 .search-field input{
   border: 1px solid #d34d38 !important;
 }
+
+.Product_container img {
+  width: 100%;
+}
