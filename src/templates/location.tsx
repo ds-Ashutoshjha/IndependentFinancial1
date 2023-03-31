@@ -550,10 +550,11 @@ console.log('c_featureSection', c_featureSection)
                         <div className="c-get-directions-button-wrapper">
                           <a
                             className="c-get-directions-button Hero-cta"
-                            target="_blank"
-                            href="#"
+                            href={c_locationBannerSection?.directionButton.link}
+                            
                           >
-                            Get Directions
+                            {c_locationBannerSection?.directionButton?.label}
+                            
                             <span className="sr-only wcag-new-tab-hover">
                               &nbsp;
                             </span>
