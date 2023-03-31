@@ -262,7 +262,7 @@ const City: Template<TemplateRenderProps> = ({
     var string: any = name.toString();;
     let result: any = string.replaceAll(" ", "-");
     if (!entity.slug) {
-      url = `/${entity.id}-${result}`;
+      url = `/${entity.id}`;
     } else {
       url = `/${entity.slug.toString()}`;
     }
@@ -275,7 +275,7 @@ const City: Template<TemplateRenderProps> = ({
         <div className="location-name-miles icon-row">
         {/* <div className="icon"> <img className=" " src={mapimage} width="20" height="20"
                       alt="" /></div> */}
-          <h2><Link className="inline-block notHighlight" href={url}
+          <h2><Link className="inline-block notHighlight" href={entity.id}
            data-ya-track={`viewstore-${entity.name}`}
            eventName={`viewstore-${entity.name}`}
            rel="noopener noreferrer"
