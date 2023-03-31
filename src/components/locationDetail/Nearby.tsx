@@ -96,12 +96,12 @@ export default function Nearby(props: any) {
                     }
                     </div> 
                     <div className="button-bx">
-                      <Link className="btn" href={`/${location.data.id}`}
+                      {/* <Link className="btn" href={`/${location.data.id}`}
                        data-ya-track={`viewstore-${location.data.name}`}
                        eventName={`viewstore-${location.data.name}`}
                        rel="noopener noreferrer">
-                        {/* <div dangerouslySetInnerHTML={{__html: View_Store}}/> */}
-                        NearByATM</Link>
+                        <div dangerouslySetInnerHTML={{__html: View_Store}}/>
+                        NearByATM</Link> */}
                       <GetDirection buttonText={props.c_getDirectionsCTAText?props.c_getDirectionsCTAText:"Get directions"} address={location.data.address} latitude={location.data.displayCoordinate ? location.data.displayCoordinate.latitude : location.data.yextDisplayCoordinate.latitude} longitude={location.data.displayCoordinate ? location.data.displayCoordinate.longitude : location.data.yextDisplayCoordinate.longitude} />
                       
                     </div>
