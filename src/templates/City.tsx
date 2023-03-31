@@ -275,7 +275,7 @@ const City: Template<TemplateRenderProps> = ({
         <div className="location-name-miles icon-row">
         {/* <div className="icon"> <img className=" " src={mapimage} width="20" height="20"
                       alt="" /></div> */}
-          <h2><Link className="inline-block notHighlight" href={entity.id}
+          <h2><Link className="inline-block notHighlight" href={url}
            data-ya-track={`viewstore-${entity.name}`}
            eventName={`viewstore-${entity.name}`}
            rel="noopener noreferrer"
