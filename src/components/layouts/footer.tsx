@@ -28,7 +28,7 @@ const Footer = (props: any) => {
                       {data?.menuLinks?.map((subdata: any) => {
                         return (
                           <>
-                            <a className="Footer-link">{subdata.label}</a>
+                            <a  target="_blank"  className="Footer-link" href={subdata.link}>{subdata.label}</a>
                           </>
                         );
                       })}
@@ -38,7 +38,9 @@ const Footer = (props: any) => {
                           {footer?.c_socialMediaIcons?.map((data: any) => {
                             return (
                               <div className="SocialLinks-linkWrapper">
-                                <img src={data?.socialIcon?.url} />
+                                <a target="_blank" href="#">
+                                < img src={data?.socialIcon?.url} />
+                                </a>
                               </div>
                             );
                           })}
