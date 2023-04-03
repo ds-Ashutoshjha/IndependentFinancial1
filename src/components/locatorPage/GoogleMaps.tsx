@@ -273,13 +273,16 @@ function UnwrappedGoogleMaps({
           
           center,
           zoom,
+          
           styles: [
             {
               featureType: "administrative",
               elementType: "all",
               stylers: [
                 {
-                  visibility: "simplified",
+                  visibility: "on",
+                  color:"#000000",
+                  
                 },
               ],
             },
@@ -289,7 +292,16 @@ function UnwrappedGoogleMaps({
               stylers: [
                 {
                   visibility: "on",
-                  color:"#e5e3df",
+                  color:"#000000",
+                },
+              ],
+            },
+            {
+              featureType: "water",
+              elementType: "geometry.fill",
+              stylers: [
+                {
+                  color: "#e8e8e8",
                 },
               ],
             },
@@ -298,7 +310,7 @@ function UnwrappedGoogleMaps({
               elementType: "gecometry.fill",
               stylers: [
                 {
-                  color:"#e5e3df",
+                  color:"#f5f5f5",
                 },
               ],
             },
