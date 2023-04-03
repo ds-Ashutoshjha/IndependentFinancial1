@@ -36,7 +36,8 @@ const Header = (props: data) => {
                               <>
                                <div> <a className="Header-link--top">
                                   <span className="Header-linkText">
-                                    {data?.label}
+                              <a target="_blank" href= {data?.link} >
+                                {data.label}</a>  
                                   </span>
                                 </a></div>
                               </>
@@ -51,7 +52,15 @@ const Header = (props: data) => {
                     <div className="flex gap-11 ml-[44%]">
                       
                           {c_headerMainMenus?.mainMenu.map((data: any) => {
-                            return <><div>{data?.label}</div></>;
+                            return <>
+                            <div >
+                              <a target="_blank" href={data?.link}>
+                              {data?.label}
+                              </a>
+                              
+
+                              
+                              </div></>;
                           })}
                        
                       </div>

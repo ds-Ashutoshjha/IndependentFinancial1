@@ -893,7 +893,7 @@ console.log('c_featureSection', c_featureSection)
                       <div className="App-infoWrapper">
                   <div className="App-titleRow">
                     <div className="App-linksContainer">
-                       <div className="App-title">Download the Independent Financial App</div>
+                       <div className="App-title">{c_mobTitle}</div>
                     </div>
                   </div>
                   <div className="App-description">{c_mobDesc}</div>
