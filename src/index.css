@@ -154,7 +154,7 @@ body.mapView .mobile-btns .btn.mapBtn{  @apply text-Dark-red border-t-0 border-l
 .location .result-inner .green-dot, .location .result-inner .red-dot{ @apply  flex justify-center items-center flex-row-reverse  }
 .location .result-inner .green-dot svg, .location .result-inner .red-dot svg{ @apply  ml-1 mt-1 }
 .location-with-filter{ @apply mb-6 flex items-center justify-between text-sm leading-5}
-.location-with-filter h1{@apply text-lg font-normal text-dark-gray my-0 font-second-main-font text-[1.75rem]}
+.location-with-filter h1{@apply text-lg font-normal text-white my-0 font-second-main-font text-[1.75rem]}
 .list-count{ @apply border-b border-gray-light mb-4 p-2 flex  flex-row items-center}
 .result-inner{@apply p-4 }
 .button-bx{@apply flex flex-col sm:flex-row mt-2.5 justify-around  ml-6}
@@ -1516,4 +1516,12 @@ a.Product-cta {
 
 .Product_container img {
   width: 100%;
+}
+.search-bx {
+  padding: 0.75rem 1rem;
+  background-color: #293651;
+  color: #fff;
+}
+.fliter-sec span.underline {
+  color: white;
 }

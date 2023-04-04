@@ -38,7 +38,10 @@ var params1: any = { latitude: center_latitude, longitude: center_longitude };
 var mapzoom = 8;
 var centerLatitude = center_latitude;
 var centerLongitude = center_longitude;
+
 const SearchLayout = (props: any): JSX.Element => {
+  console.log('props', props)
+
   const [isLoading, setIsloading] = React.useState(true);
   const [check, setCheck] = useState(false);
   type FilterHandle = React.ElementRef<typeof FilterSearch>;
@@ -59,6 +62,8 @@ const SearchLayout = (props: any): JSX.Element => {
   const [optionclick, setOptionClick] = useState(true);
 
   const loading = useSearchState((s) => s.searchStatus.isLoading);
+
+
 
   var searchKey: any;
   var target;
@@ -190,10 +195,10 @@ const SearchLayout = (props: any): JSX.Element => {
     searchActions.executeVerticalQuery();
   }
 
-  let bannerimage =
-    props._site.c_locatorBannerImage != undefined
-      ? props._site.c_locatorBannerImage.image.url
-      : "";
+const c_locatorButton = props._site?.c_locatorButton[0]?.mainMenu != undefined? props._site?.c_locatorButton[0]?.mainMenu : "";
+
+// console.log('c_locatorButtonssss', c_locatorButton)  
+
 
   // const loader =
   //   isLoading ? <LoadingSpinner /> : '';
@@ -254,11 +259,28 @@ const SearchLayout = (props: any): JSX.Element => {
         ) : (
           ""
         )}
+       
+
+
+
+
+
         <div className="search-bx">
           <div className="location-with-filter">
             <h1 className="">{StaticData.FindLocationtext}</h1>
           </div>
+          <div className="loBtn flex">
+{c_locatorButton.map((data:any)=>{
+  return(<>
 
+  <a className="Link button-red cursor-pointer mr-2" type="button" 
+  style={{unicodeBidi: "bidi-override", direction: "ltr"}} >
+  {data?.label}
+  </a>
+             
+  </>)
+})}
+      </div>
           <div className="search-field">
             <FilterSearch
               ref={filterRef}
