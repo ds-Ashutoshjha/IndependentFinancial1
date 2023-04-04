@@ -40,7 +40,7 @@ var centerLatitude = center_latitude;
 var centerLongitude = center_longitude;
 
 const SearchLayout = (props: any): JSX.Element => {
-  console.log('props', props)
+  console.log("props", props);
 
   const [isLoading, setIsloading] = React.useState(true);
   const [check, setCheck] = useState(false);
@@ -62,8 +62,6 @@ const SearchLayout = (props: any): JSX.Element => {
   const [optionclick, setOptionClick] = useState(true);
 
   const loading = useSearchState((s) => s.searchStatus.isLoading);
-
-
 
   var searchKey: any;
   var target;
@@ -195,10 +193,12 @@ const SearchLayout = (props: any): JSX.Element => {
     searchActions.executeVerticalQuery();
   }
 
-const c_locatorButton = props._site?.c_locatorButton[0]?.mainMenu != undefined? props._site?.c_locatorButton[0]?.mainMenu : "";
+  const c_locatorButton =
+    props._site?.c_locatorButton[0]?.mainMenu != undefined
+      ? props._site?.c_locatorButton[0]?.mainMenu
+      : "";
 
-// console.log('c_locatorButtonssss', c_locatorButton)  
-
+  // console.log('c_locatorButtonssss', c_locatorButton)
 
   // const loader =
   //   isLoading ? <LoadingSpinner /> : '';
@@ -259,28 +259,27 @@ const c_locatorButton = props._site?.c_locatorButton[0]?.mainMenu != undefined? 
         ) : (
           ""
         )}
-       
-
-
-
-
 
         <div className="search-bx">
           <div className="location-with-filter">
             <h1 className="">{StaticData.FindLocationtext}</h1>
           </div>
           <div className="loBtn flex">
-{c_locatorButton.map((data:any)=>{
-  return(<>
-
-  <a className="Link button-red cursor-pointer mr-2" type="button" 
-  style={{unicodeBidi: "bidi-override", direction: "ltr"}} >
-  {data?.label}
-  </a>
-             
-  </>)
-})}
-      </div>
+            {c_locatorButton.map((data: any) => {
+              return (
+                <>
+                  <a href= {data?.link}
+                    className="Link button-red cursor-pointer mr-2"
+                    type="button"
+                    style={{ unicodeBidi: "bidi-override", direction: "ltr" }}
+                  >
+                 {data?.label}
+                  
+                  </a>
+                </>
+              );
+            })}
+          </div>
           <div className="search-field">
             <FilterSearch
               ref={filterRef}
