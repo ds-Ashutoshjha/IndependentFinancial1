@@ -2,7 +2,7 @@
 export const AnswerExperienceConfig = {
   limit:3,
   locale: "en",
-  apiKey : "06fd5ba2b2a505cc0d620efe004958a4",
+  apiKey : "ba0196480894bdb267681506ab1ee93d",
   verticalKey : "locations",
   experienceKey : "independent-financial",
   experienceVersion: "STAGING",
